@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LOVE.exe — Davi & Sara</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <div class="particles" id="particles"></div>
+
+
+    <main class="container">
+
+
+        <!-- =========================
+             TELA 1
+        ========================== -->
+
+        <section class="screen active" id="screen1">
+
+            <div class="system-icon">♡</div>
+
+            <h1>LOVE.exe</h1>
+
+            <p class="subtitle">
+                Sistema de sentimentos
+            </p>
+
+
+            <div class="terminal">
+
+                <p>> Inicializando sistema...</p>
+
+                <p>> Carregando memórias...</p>
+
+                <p>> Analisando momentos...</p>
+
+                <p>> Procurando alguém especial...</p>
+
+
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+
+
+                <p class="success">
+                    > Sistema iniciado com sucesso.
+                </p>
+
+            </div>
+
+
+            <button class="btn" onclick="nextScreen(2)">
+                INICIAR SISTEMA
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             TELA 2
+        ========================== -->
+
+        <section class="screen" id="screen2">
+
+            <div class="heart">♥</div>
+
+            <h2>Olá, Sara.</h2>
+
+
+            <p>
+                Se você está vendo isso, significa que o
+                sistema encontrou uma pessoa extremamente
+                importante para o Davi.
+            </p>
+
+
+            <p>
+                E depois de analisar todas as informações,
+                existe uma conclusão impossível de ignorar.
+            </p>
+
+
+            <div class="terminal small">
+
+                <p>> Pessoa encontrada: Sara</p>
+
+                <p>> Importância: ██████████ 100%</p>
+
+                <p>> Carinho: ∞</p>
+
+                <p>> Possibilidade de esquecer: 0%</p>
+
+            </div>
+
+
+            <button class="btn" onclick="nextScreen(3)">
+                CONTINUAR →
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             TELA 3
+        ========================== -->
+
+        <section class="screen" id="screen3">
+
+            <h2>
+                Executando nossa história...
+            </h2>
+
+
+            <div class="code-window">
+
+                <div class="code-header">
+
+                    <span class="dot red"></span>
+
+                    <span class="dot yellow"></span>
+
+                    <span class="dot green"></span>
+
+                    <span class="file-name">
+                        nossa_historia.js
+                    </span>
+
+                </div>
+
+
+                <div class="code">
+
+<pre>
+<span class="keyword">const</span> Davi = {
+    sentimentos: <span class="string">"sinceros"</span>,
+    carinho: <span class="string">"infinito"</span>,
+    futuro: <span class="string">"?"</span>
+};
+
+<span class="keyword">const</span> Sara = {
+    importancia: <span class="string">"infinita"</span>,
+    lugar: <span class="string">"coração do Davi"</span>
+};
+
+<span class="keyword">if</span> (Davi.encontrou(Sara)) {
+
+    futuro = <span class="string">"juntos"</span>;
+
+}
+</pre>
+
+                </div>
+
+            </div>
+
+
+            <button class="btn" onclick="nextScreen(4)">
+                EXECUTAR CÓDIGO ♥
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             TELA 4
+        ========================== -->
+
+        <section class="screen" id="screen4">
+
+            <div class="loading-circle"></div>
+
+            <h2>
+                Processando sentimentos...
+            </h2>
+
+            <p id="loadingText">
+                Analisando momentos...
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             TELA 5
+        ========================== -->
+
+        <section class="screen" id="screen5">
+
+            <div class="warning">
+                !
+            </div>
+
+
+            <h2>
+                ATENÇÃO
+            </h2>
+
+
+            <div class="terminal">
+
+                <p>
+                    > Sentimento detectado.
+                </p>
+
+                <p>
+                    > Nível de importância: ∞
+                </p>
+
+                <p>
+                    > Compatibilidade: 100%
+                </p>
+
+                <p>
+                    > Possibilidade de esquecer: 0%
+                </p>
+
+                <p class="success">
+                    > Resultado: pessoa especial encontrada.
+                </p>
+
+            </div>
+
+
+            <button class="btn" onclick="nextScreen(6)">
+                VER STATUS ♥
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             TELA 6
+             CONTADOR + SCANNER
+        ========================== -->
+
+        <section class="screen" id="screen6">
+
+            <h2>
+                STATUS DO RELACIONAMENTO
+            </h2>
+
+
+            <!-- CONTADOR -->
+
+            <div class="days-card">
+
+                <div class="days-icon">
+                    ♥
+                </div>
+
+
+                <span class="days-label">
+                    DAVI & SARA
+                </span>
+
+
+                <div
+                    class="days-number"
+                    id="daysTogether"
+                >
+                    0
+                </div>
+
+
+                <span class="days-word">
+                    DIAS
+                </span>
+
+
+                <p id="sinceDate">
+                    Desde 28/09/2026 ❤️
+                </p>
+
+            </div>
+
+
+
+            <!-- SCANNER -->
+
+            <h3 class="emotion-title">
+                SCANNER EMOCIONAL
+            </h3>
+
+
+            <p class="emotion-subtitle">
+                Ajuste os níveis manualmente
+            </p>
+
+
+
+            <div class="emotion-grid">
+
+
+                <!-- =================
+                     DAVI
+                ================== -->
+
+                <div class="emotion-card">
+
+                    <h3>
+                        DAVI
+                    </h3>
+
+
+                    <!-- FELICIDADE -->
+
+                    <div class="emotion-control">
+
+                        <div class="emotion-top">
+
+                            <span>
+                                Felicidade
+                            </span>
+
+                            <strong
+                                id="davi-happiness-value"
+                            >
+                                98%
+                            </strong>
+
+                        </div>
+
+
+                        <input
+                            type="range"
+                            min="0"
+                            max="100"
+                            value="98"
+                            class="emotion-slider happiness-slider"
+                            data-person="davi"
+                            data-emotion="happiness"
+                        >
+
+                    </div>
+
+
+
+                    <!-- ESTRESSE -->
+
+                    <div class="emotion-control">
+
+                        <div class="emotion-top">
+
+                            <span>
+                                Estresse
+                            </span>
+
+                            <strong
+                                id="davi-stress-value"
+                            >
+                                25%
+                            </strong>
+
+                        </div>
+
+
+                        <input
+                            type="range"
+                            min="0"
+                            max="100"
+                            value="25"
+                            class="emotion-slider stress-slider"
+                            data-person="davi"
+                            data-emotion="stress"
+                        >
+
+                    </div>
+
+
+
+                    <!-- TRISTEZA -->
+
+                    <div class="emotion-control">
+
+                        <div class="emotion-top">
+
+                            <span>
+                                Tristeza
+                            </span>
+
+                            <strong
+                                id="davi-sadness-value"
+                            >
+                                12%
+                            </strong>
+
+                        </div>
+
+
+                        <input
+                            type="range"
+                            min="0"
+                            max="100"
+                            value="12"
+                            class="emotion-slider sadness-slider"
+                            data-person="davi"
+                            data-emotion="sadness"
+                        >
+
+                    </div>
+
+
+
+                    <!-- ATRAÇÃO -->
+
+                    <div class="emotion-control">
+
+                        <div class="emotion-top">
+
+                            <span>
+                                Atração
+                            </span>
+
+                            <strong
+                                id="davi-attraction-value"
+                            >
+                                90%
+                            </strong>
+
+                        </div>
+
+
+                        <input
+                            type="range"
+                            min="0"
+                            max="100"
+                            value="90"
+                            class="emotion-slider attraction-slider"
+                            data-person="davi"
+                            data-emotion="attraction"
+                        >
+
+                    </div>
+
+
+
+                    <!-- MEDO -->
+
+                    <div class="emotion-control">
+
+                        <div class="emotion-top">
+
+                            <span>
+                                Medo
+                            </span>
+
+                            <strong
+                                id="davi-fear-value"
+                            >
+                                10%
+                            </strong>
+
+                        </div>
+
+
+                        <input
+                            type="range"
+                            min="0"
+                            max="100"
+                            value="10"
+                            class="emotion-slider fear-slider"
+                            data-person="davi"
+                            data-emotion="fear"
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================
+                     SARA
+                ================== -->
+
+                <div class="emotion-card">
+
+                    <h3>
+                        SARA
+                    </h3>
+
+
+                    <!-- FELICIDADE -->
+
+                    <div class="emotion-control">
+
+                        <div class="emotion-top">
+
+                            <span>
+                                Felicidade
+                            </span>
+
+                            <strong
+                                id="sara-happiness-value"
+                            >
+                                99%
+                            </strong>
+
+                        </div>
+
+
+                        <input
+                            type="range"
+                            min="0"
+                            max="100"
+                            value="99"
+                            class="emotion-slider happiness-slider"
+                            data-person="sara"
+                            data-emotion="happiness"
+                        >
+
+                    </div>
+
+
+
+                    <!-- ESTRESSE -->
+
+                    <div class="emotion-control">
+
+                        <div class="emotion-top">
+
+                            <span>
+                                Estresse
+                            </span>
+
+                            <strong
+                                id="sara-stress-value"
+                            >
+                                20%
+                            </strong>
+
+                        </div>
+
+
+                        <input
+                            type="range"
+                            min="0"
+                            max="100"
+                            value="20"
+                            class="emotion-slider stress-slider"
+                            data-person="sara"
+                            data-emotion="stress"
+                        >
+
+                    </div>
+
+
+
+                    <!-- TRISTEZA -->
+
+                    <div class="emotion-control">
+
+                        <div class="emotion-top">
+
+                            <span>
+                                Tristeza
+                            </span>
+
+                            <strong
+                                id="sara-sadness-value"
+                            >
+                                8%
+                            </strong>
+
+                        </div>
+
+
+                        <input
+                            type="range"
+                            min="0"
+                            max="100"
+                            value="8"
+                            class="emotion-slider sadness-slider"
+                            data-person="sara"
+                            data-emotion="sadness"
+                        >
+
+                    </div>
+
+
+
+                    <!-- ATRAÇÃO -->
+
+                    <div class="emotion-control">
+
+                        <div class="emotion-top">
+
+                            <span>
+                                Atração
+                            </span>
+
+                            <strong
+                                id="sara-attraction-value"
+                            >
+                                95%
+                            </strong>
+
+                        </div>
+
+
+                        <input
+                            type="range"
+                            min="0"
+                            max="100"
+                            value="95"
+                            class="emotion-slider attraction-slider"
+                            data-person="sara"
+                            data-emotion="attraction"
+                        >
+
+                    </div>
+
+
+
+                    <!-- MEDO -->
+
+                    <div class="emotion-control">
+
+                        <div class="emotion-top">
+
+                            <span>
+                                Medo
+                            </span>
+
+                            <strong
+                                id="sara-fear-value"
+                            >
+                                5%
+                            </strong>
+
+                        </div>
+
+
+                        <input
+                            type="range"
+                            min="0"
+                            max="100"
+                            value="5"
+                            class="emotion-slider fear-slider"
+                            data-person="sara"
+                            data-emotion="fear"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STATUS -->
+
+            <div class="scanner-status">
+
+                <span class="scanner-dot"></span>
+
+                <span>
+                    SCANNER ONLINE
+                </span>
+
+            </div>
+
+
+            <button
+                class="btn"
+                onclick="nextScreen(7)"
+            >
+                CONTINUAR →
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             TELA 7
+        ========================== -->
+
+        <section
+            class="screen final-screen"
+            id="screen7"
+        >
+
+            <div class="big-heart">
+                ♥
+            </div>
+
+
+            <p class="final-small">
+                Depois de analisar todos os dados...
+            </p>
+
+
+            <h1 class="final-title">
+                Eu escolho você, Sara.
+            </h1>
+
+
+            <p class="final-text">
+
+                Para viver momentos bons, enfrentar os
+                momentos difíceis, rir, crescer e construir
+                uma história juntos.
+
+            </p>
+
+
+            <p class="question">
+                Então eu tenho uma pergunta...
+            </p>
+
+
+            <h2 class="proposal">
+                Você aceita ficar comigo? ❤️
+            </h2>
+
+
+            <div class="buttons">
+
+                <button
+                    class="btn yes-btn"
+                    onclick="accepted()"
+                >
+                    SIM ❤️
+                </button>
+
+
+                <button
+                    class="btn yes-btn"
+                    onclick="accepted()"
+                >
+                    COM CERTEZA ❤️
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             TELA 8
+        ========================== -->
+
+        <section
+            class="screen accepted-screen"
+            id="screen8"
+        >
+
+            <div class="celebration">
+                ♥
+            </div>
+
+
+            <h1>
+                STATUS: ACEITO ❤️
+            </h1>
+
+
+            <p>
+                Sistema atualizado com sucesso.
+            </p>
+
+
+            <div class="terminal">
+
+                <p>
+                    > Relacionamento: ATIVO ❤️
+                </p>
+
+                <p>
+                    > Davi + Sara: JUNTOS
+                </p>
+
+                <p>
+                    > Felicidade: ∞
+                </p>
+
+                <p>
+                    > Futuro: JUNTOS
+                </p>
+
+            </div>
+
+
+            <p class="end">
+                LOVE.exe continuará rodando...
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
